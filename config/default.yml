@@ -1,0 +1,7 @@
+# Default configuration for jeff-style-rails.
+# Add custom JeffStyleRails/* cops and personal RuboCop / Rails rule overrides here.
+
+JeffStyleRails/Example:
+  Description: "Starter template cop demonstrating AST matching and autocorrection."
+  Enabled: false
+  VersionAdded: "0.1.0"

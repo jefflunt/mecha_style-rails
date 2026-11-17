@@ -1,0 +1,22 @@
+plugins:
+  - jeff-style-rails
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2
+  SuggestExtensions: false
+
+Metrics/BlockLength:
+  Exclude:
+    - "*.gemspec"
+    - "spec/**/*"
+
+Naming/FileName:
+  Exclude:
+    - "lib/jeff-style-rails.rb"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
