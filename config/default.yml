@@ -45,3 +45,8 @@ MechaStyleRails/NoPresenceTernary:
   Description: "Disallow noisy params[:x].present? ? ... : ... ternaries in controllers."
   Enabled: true
   VersionAdded: "0.2.0"
+
+MechaStyleRails/InlineRedirectFlash:
+  Description: "Pass alert:/notice: directly to redirect_to instead of assigning flash[:alert]/flash[:notice] beforehand."
+  Enabled: true
+  VersionAdded: "0.3.0"
