@@ -27,7 +27,7 @@ module RuboCop
 
           render_json_node(node) do |pair_node, value_node|
             next unless __inline_formatting?(value_node)
-            next if __allow_error_hash? && __error_hash?(value_node)
+            next if     __allow_error_hash? && __error_hash?(value_node)
 
             add_offense(pair_node)
           end

@@ -31,7 +31,7 @@ module RuboCop
         def on_class(node)
           namespace = __controller_namespace
           return unless namespace
-          return if node.identifier.short_name == :BaseController
+          return if     node.identifier.short_name == :BaseController
 
           parent = node.parent_class
           return unless parent

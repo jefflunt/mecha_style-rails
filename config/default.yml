@@ -3,6 +3,9 @@
 Layout/LineLength:
   Max: 256
 
+Layout/ExtraSpacing:
+  Enabled: false
+
 Style/GuardClause:
   Enabled: true
   MinBodyLength: 1
@@ -55,3 +58,8 @@ MechaStyleRails/SingleLineGuardClause:
   Description: "Enforce single-line modifier form for single-statement guard clauses."
   Enabled: true
   VersionAdded: "0.4.0"
+
+MechaStyleRails/AlignedGuardClauses:
+  Description: "Align consecutive modifier-form guard clauses into two columns with no blank lines between them."
+  Enabled: true
+  VersionAdded: "0.5.0"

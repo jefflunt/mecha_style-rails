@@ -33,7 +33,7 @@ module RuboCop
 
         def on_or(node)
           return unless __controller_file?
-          return if node.parent&.or_type?
+          return if     node.parent&.or_type?
           return unless __contains_param_access?(node.lhs) && __contains_param_access?(node.rhs)
 
           add_offense(node, message: MSG_FALLBACK)
