@@ -6,7 +6,7 @@
 ## Key Decisions
 - **Plugin System**: Uses RuboCop 1.72+ `lint_roller` plugin API (`RuboCop::MechaStyleRails::Plugin`) declared via `default_lint_roller_plugin` in `mecha_style-rails.gemspec`.
 - **Auto-Loading Cops**: `lib/rubocop/mecha_style_rails.rb` requires all files matching `lib/rubocop/cop/mecha_style_rails/**/*.rb`.
-- **Default Configuration**: `config/default.yml` holds default settings for custom `MechaStyleRails/*` cops as well as personal overrides (`Layout/LineLength` `Max: 256`, `Layout/ExtraSpacing` `Enabled: false`, `Style/GuardClause` `MinBodyLength: 1`, `Rails/DefaultScope`).
+- **Default Configuration**: `config/default.yml` holds default settings for custom `MechaStyleRails/*` cops as well as personal overrides (`Layout/LineLength` `Max: 256`, `Layout/ExtraSpacing` `Enabled: false`, `Metrics/ClassLength` `Max: 1000`, `Style/GuardClause` `MinBodyLength: 1`, `Rails/DefaultScope`).
 - **Visibility Naming Convention**: `private` and `protected` keywords are disallowed (`MechaStyleRails/NoVisibilityModifiers`); use `_method` for protected intent and `__method` for private intent so all methods remain directly unit-testable.
 - **Controller & Serialization Conventions**:
   - Namespaced controllers (`Api::*`, `Admin::*`, etc.) must inherit from `<Namespace>::BaseController` (`MechaStyleRails/NamespaceBaseController`).

@@ -6,6 +6,9 @@ Layout/LineLength:
 Layout/ExtraSpacing:
   Enabled: false
 
+Metrics/ClassLength:
+  Max: 1000
+
 Style/GuardClause:
   Enabled: true
   MinBodyLength: 1
