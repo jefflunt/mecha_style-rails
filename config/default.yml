@@ -1,7 +1,47 @@
-# Default configuration for jeff-style-rails.
-# Add custom JeffStyleRails/* cops and personal RuboCop / Rails rule overrides here.
+# Default configuration for mecha_style-rails.
 
-JeffStyleRails/Example:
+Layout/LineLength:
+  Max: 256
+
+Style/GuardClause:
+  Enabled: true
+  MinBodyLength: 1
+
+Rails/DefaultScope:
+  Enabled: true
+
+MechaStyleRails/Example:
   Description: "Starter template cop demonstrating AST matching and autocorrection."
   Enabled: false
   VersionAdded: "0.1.0"
+
+MechaStyleRails/NamespaceBaseController:
+  Description: "Namespaced controllers must inherit from their namespace BaseController."
+  Enabled: true
+  VersionAdded: "0.2.0"
+
+MechaStyleRails/NoVisibilityModifiers:
+  Description: "Disallow private/protected in favor of _method and __method naming."
+  Enabled: true
+  VersionAdded: "0.2.0"
+
+MechaStyleRails/NoInlineJsonRender:
+  Description: "Disallow inline JSON hash/array rendering in controllers; use app/presenters/."
+  Enabled: true
+  AllowErrorHash: true
+  VersionAdded: "0.2.0"
+
+MechaStyleRails/NoInlineHashMapping:
+  Description: "Disallow inline .map { |x| { ... } } hash formatting in controllers; use app/presenters/."
+  Enabled: true
+  VersionAdded: "0.2.0"
+
+MechaStyleRails/NoFallbackParamLookup:
+  Description: "Disallow fallback params lookups and string-to-boolean params comparisons."
+  Enabled: true
+  VersionAdded: "0.2.0"
+
+MechaStyleRails/NoPresenceTernary:
+  Description: "Disallow noisy params[:x].present? ? ... : ... ternaries in controllers."
+  Enabled: true
+  VersionAdded: "0.2.0"

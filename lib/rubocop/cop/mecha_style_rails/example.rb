@@ -2,7 +2,7 @@
 
 module RuboCop
   module Cop
-    module JeffStyleRails
+    module MechaStyleRails
       # Starter template cop showing AST node pattern matching and autocorrection.
       # Disabled by default in `config/default.yml`.
       #

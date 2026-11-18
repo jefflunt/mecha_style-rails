@@ -1,5 +1,5 @@
 plugins:
-  - jeff-style-rails
+  - mecha_style-rails
 
 AllCops:
   NewCops: enable
@@ -13,7 +13,7 @@ Metrics/BlockLength:
 
 Naming/FileName:
   Exclude:
-    - "lib/jeff-style-rails.rb"
+    - "lib/mecha_style-rails.rb"
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes

@@ -1,21 +1,21 @@
 # frozen_string_literal: true
 
-require_relative "lib/rubocop/jeff_style_rails/version"
+require_relative "lib/rubocop/mecha_style_rails/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "jeff-style-rails"
-  spec.version = RuboCop::JeffStyleRails::VERSION
+  spec.name = "mecha_style-rails"
+  spec.version = RuboCop::MechaStyleRails::VERSION
   spec.authors = ["Jeff Lunt"]
 
   spec.summary = "Custom RuboCop rules enforcing personal Ruby on Rails style."
   spec.description = "A RuboCop plugin containing custom cops and configuration for Jeff's Ruby on Rails conventions."
-  spec.homepage = "https://github.com/jefflunt/jeff-style-rails"
+  spec.homepage = "https://github.com/jefflunt/mecha_style-rails"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
-  spec.metadata["default_lint_roller_plugin"] = "RuboCop::JeffStyleRails::Plugin"
+  spec.metadata["default_lint_roller_plugin"] = "RuboCop::MechaStyleRails::Plugin"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = Dir.chdir(__dir__) do

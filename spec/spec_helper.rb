@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require "jeff-style-rails"
+require "mecha_style-rails"
 require "rubocop/rspec/support"
 
-RuboCop::ConfigLoader.inject_defaults!(RuboCop::JeffStyleRails::CONFIG_DEFAULT.to_s)
+RuboCop::ConfigLoader.inject_defaults!(RuboCop::MechaStyleRails::CONFIG_DEFAULT.to_s)
 
 RSpec.configure do |config|
   config.disable_monkey_patching!

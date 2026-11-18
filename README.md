@@ -1,4 +1,4 @@
-# jeff-style-rails
+# mecha_style-rails
 
 Custom [RuboCop](https://rubocop.org) plugin enforcing personal Ruby on Rails style and conventions.
 
@@ -8,7 +8,7 @@ Add the gem to your Rails application's `Gemfile`:
 
 ```ruby
 group :development, :test do
-  gem "jeff-style-rails", github: "jefflunt/jeff-style-rails", require: false
+  gem "mecha_style-rails", github: "jefflunt/mecha_style-rails", require: false
 end
 ```
 
@@ -17,14 +17,14 @@ Enable the plugin in `.rubocop.yml`:
 ```yaml
 plugins:
   - rubocop-rails
-  - jeff-style-rails
+  - mecha_style-rails
 ```
 
 ## Adding Custom Cops
 
-1. Create a cop class in `lib/rubocop/cop/jeff_style_rails/<cop_name>.rb` under `RuboCop::Cop::JeffStyleRails` (all files in that directory are auto-required).
+1. Create a cop class in `lib/rubocop/cop/mecha_style_rails/<cop_name>.rb` under `RuboCop::Cop::MechaStyleRails` (all files in that directory are auto-required).
 2. Add its default configuration entry in `config/default.yml`.
-3. Add specs in `spec/rubocop/cop/jeff_style_rails/<cop_name>_spec.rb`.
+3. Add specs in `spec/rubocop/cop/mecha_style_rails/<cop_name>_spec.rb`.
 
 You can also place personal overrides for built-in `Style/*`, `Layout/*`, `Lint/*`, or `Rails/*` cops directly in `config/default.yml`.
 

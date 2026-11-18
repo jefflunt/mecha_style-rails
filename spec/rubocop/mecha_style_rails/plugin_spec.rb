@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::JeffStyleRails::Plugin do
+RSpec.describe RuboCop::MechaStyleRails::Plugin do
   subject(:plugin) { described_class.new }
 
   it "exposes plugin metadata" do
     about = plugin.about
-    expect(about.name).to eq("jeff-style-rails")
-    expect(about.version).to eq(RuboCop::JeffStyleRails::VERSION)
+    expect(about.name).to eq("mecha_style-rails")
+    expect(about.version).to eq(RuboCop::MechaStyleRails::VERSION)
   end
 
   it "supports the rubocop engine" do

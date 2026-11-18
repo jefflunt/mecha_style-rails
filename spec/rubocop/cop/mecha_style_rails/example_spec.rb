@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RuboCop::Cop::JeffStyleRails::Example, :config do
+RSpec.describe RuboCop::Cop::MechaStyleRails::Example, :config do
   it "registers an offense and autocorrects `legacy_helper`" do
     expect_offense(<<~RUBY)
       legacy_helper(user)

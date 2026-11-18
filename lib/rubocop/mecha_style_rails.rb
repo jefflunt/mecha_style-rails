@@ -2,17 +2,17 @@
 
 require "pathname"
 require "rubocop"
-require_relative "jeff_style_rails/version"
-require_relative "jeff_style_rails/plugin"
+require_relative "mecha_style_rails/version"
+require_relative "mecha_style_rails/plugin"
 
 module RuboCop
   # Namespace for Jeff's custom Rails RuboCop plugin and rules.
-  module JeffStyleRails
+  module MechaStyleRails
     PROJECT_ROOT = Pathname.new(__dir__).join("../..").expand_path.freeze
     CONFIG_DEFAULT = PROJECT_ROOT.join("config/default.yml").freeze
   end
 end
 
-Dir.glob(File.join(__dir__, "cop/jeff_style_rails/**/*.rb")).each do |cop_file|
+Dir.glob(File.join(__dir__, "cop/mecha_style_rails/**/*.rb")).each do |cop_file|
   require cop_file
 end
