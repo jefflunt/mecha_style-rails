@@ -13,5 +13,6 @@
   - Inline JSON hash/array rendering and inline `.map { |x| { ... } }` formatting in controllers are disallowed (`MechaStyleRails/NoInlineJsonRender`, `MechaStyleRails/NoInlineHashMapping`); extract serialization into `app/presenters/`.
   - Fallback `params` chains, string-to-boolean param checks, and noisy `params[:x].present? ? ... : ...` ternaries are disallowed (`MechaStyleRails/NoFallbackParamLookup`, `MechaStyleRails/NoPresenceTernary`); expect strict JSON types.
   - Assigning `flash[:alert]` / `flash[:notice]` immediately before `redirect_to` is disallowed (`MechaStyleRails/InlineRedirectFlash`); pass `alert:` / `notice:` directly to `redirect_to`.
+  - Single-statement guard clauses (`return`, `next`, `break`, `raise`, `fail`, `throw`) must be written on a single line (`MechaStyleRails/SingleLineGuardClause`), with autocorrection skipped when the result would exceed `Layout/LineLength`, contain comments, or hit precedence hazards.
 - **Testing & Linting**: Uses RSpec with `rubocop/rspec/support` (`expect_offense`, `expect_no_offenses`, `expect_correction`) and `RuboCop::ConfigLoader.inject_defaults!`. Run `bundle exec rake` to execute both RSpec and RuboCop.
 - **Ruby Environment**: Targets Ruby `>= 3.2.0` (developed on Ruby `4.0.9` with rbenv gemset `mecha_style-rails`).

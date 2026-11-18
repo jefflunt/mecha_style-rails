@@ -50,3 +50,8 @@ MechaStyleRails/InlineRedirectFlash:
   Description: "Pass alert:/notice: directly to redirect_to instead of assigning flash[:alert]/flash[:notice] beforehand."
   Enabled: true
   VersionAdded: "0.3.0"
+
+MechaStyleRails/SingleLineGuardClause:
+  Description: "Enforce single-line modifier form for single-statement guard clauses."
+  Enabled: true
+  VersionAdded: "0.4.0"
