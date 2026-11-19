@@ -71,3 +71,18 @@ MechaStyleRails/AlignedCaseWhen:
   Description: "Enforce aligned single-line `when ... then ...` branches and indented `else` in `case` statements."
   Enabled: true
   VersionAdded: "0.7.0"
+
+MechaStyleRails/NoMultilineConditionalAssignment:
+  Description: "Disallow assigning variables to multi-line `if`/`unless` blocks and multi-line `||=`/`&&=` expressions."
+  Enabled: true
+  VersionAdded: "0.8.0"
+
+MechaStyleRails/NoRedundantMethodAlias:
+  Description: "Disallow aliasing bare zero-argument method calls (excluding `_method`/`__method`) to local variables."
+  Enabled: true
+  VersionAdded: "0.8.0"
+
+MechaStyleRails/InlineFallbackReturn:
+  Description: "Collapse `var = a; var ||= b; var` (or `&&=`) at the end of a method/block into `a || b` (or `a && b`)."
+  Enabled: true
+  VersionAdded: "0.8.0"

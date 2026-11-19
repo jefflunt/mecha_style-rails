@@ -16,5 +16,8 @@
   - Single-statement guard clauses (`return`, `next`, `break`, `raise`, `fail`, `throw`) must be written on a single line (`MechaStyleRails/SingleLineGuardClause`), with autocorrection skipped when the result would exceed `Layout/LineLength`, contain comments, or hit precedence hazards.
   - Consecutive modifier-form guard clauses must be aligned into two vertical columns (both `if`/`unless` keywords and conditions) with no blank lines between them (`MechaStyleRails/AlignedGuardClauses`).
   - `case ... when` statements must use single-line `when ... then ...` branches with vertically aligned `then` keywords and an indented `else` block (`MechaStyleRails/AlignedCaseWhen`).
+  - Assigning variables to multi-line `if`/`unless` blocks or multi-line `||=`/`&&=` expressions is disallowed; extract into a `__method` or use a `case` statement (`MechaStyleRails/NoMultilineConditionalAssignment`).
+  - Aliasing bare zero-argument method calls (excluding `_method`/`__method`) to local variables without reassignment is disallowed (`MechaStyleRails/NoRedundantMethodAlias`).
+  - Redundant `var = a; var ||= b; var` (or `&&=`) tails in methods/blocks must be collapsed into `a || b` (or `a && b`) (`MechaStyleRails/InlineFallbackReturn`).
 - **Testing & Linting**: Uses RSpec with `rubocop/rspec/support` (`expect_offense`, `expect_no_offenses`, `expect_correction`) and `RuboCop::ConfigLoader.inject_defaults!`. Run `bundle exec rake` to execute both RSpec and RuboCop.
 - **Ruby Environment**: Targets Ruby `>= 3.2.0` (developed on Ruby `4.0.9` with rbenv gemset `mecha_style-rails`).
