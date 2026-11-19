@@ -66,3 +66,8 @@ MechaStyleRails/AlignedGuardClauses:
   Description: "Align consecutive modifier-form guard clauses into two columns with no blank lines between them."
   Enabled: true
   VersionAdded: "0.5.0"
+
+MechaStyleRails/AlignedCaseWhen:
+  Description: "Enforce aligned single-line `when ... then ...` branches and indented `else` in `case` statements."
+  Enabled: true
+  VersionAdded: "0.7.0"
