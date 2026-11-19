@@ -22,7 +22,7 @@ MechaStyleRails/Example:
   VersionAdded: "0.1.0"
 
 MechaStyleRails/NamespaceBaseController:
-  Description: "Namespaced controllers must inherit from their namespace BaseController."
+  Description: "Only namespaced BaseController classes may inherit from ApplicationController; all other controllers must live in a namespace and inherit from its BaseController."
   Enabled: true
   VersionAdded: "0.2.0"
 
